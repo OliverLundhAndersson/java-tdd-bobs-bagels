@@ -28,6 +28,14 @@ public class Basket {
         if (basket.isEmpty()) {
             System.out.println("Basket is empty");
             return false;
+        } else if (basket.contains(type)) {
+            // Remove only one of type if multiple exists
+            for (int i = 0; i < basket.size(); i++) {
+                if (basket.get(i).equals(type)) {
+                    basket.remove(i);
+                    return true;
+                }
+            }
         }
         return true;
     }
