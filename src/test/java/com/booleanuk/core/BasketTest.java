@@ -37,7 +37,13 @@ class BasketTest {
         Basket basket = new Basket(2);
 
         boolean b1 = basket.removeBagel("1");
-
         assertFalse(b1);
+
+        basket.addBagel("1");
+        boolean b2 = basket.removeBagel("1");
+        boolean b3 = basket.removeBagel("1");
+
+        assertTrue(b2);
+        assertFalse(b3);
     }
 }
