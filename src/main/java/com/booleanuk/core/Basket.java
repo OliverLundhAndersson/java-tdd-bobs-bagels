@@ -16,7 +16,12 @@ public class Basket {
     }
 
     public boolean addBagel(String type){
-        return true;
+        if (basket.size() < this.capacity) {
+            basket.add(type);
+            return true;
+        }
+        System.out.println("Basket is full");
+        return false;
     }
 
     public boolean removeBagel(String type) {
