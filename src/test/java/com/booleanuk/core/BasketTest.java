@@ -60,15 +60,15 @@ class BasketTest {
     @Test
     public void testSetCapacity() {
         Basket basket = new Basket(2);
-        basket.setCapacity(3);
+        basket.setCapacity(3, true);
         assertEquals(3, basket.capacity);
 
-        boolean b1 = basket.setCapacity(-1);
+        boolean b1 = basket.setCapacity(-1, true);
         assertFalse(b1);
 
         basket.addBagel("1");
         basket.addBagel("2");
-        boolean b2 = basket.setCapacity(1);
+        boolean b2 = basket.setCapacity(1, true);
         assertFalse(b2);
     }
 }
