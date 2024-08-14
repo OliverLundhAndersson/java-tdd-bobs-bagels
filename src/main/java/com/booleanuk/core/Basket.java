@@ -25,6 +25,10 @@ public class Basket {
     }
 
     public boolean removeBagel(String type) {
+        if (basket.isEmpty()) {
+            System.out.println("Basket is empty");
+            return false;
+        }
         return true;
     }
 
