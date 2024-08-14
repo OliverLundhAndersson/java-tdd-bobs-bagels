@@ -7,7 +7,7 @@ public class Basket {
     public ArrayList<String> basket;
 
     public Basket(int capacity) {
-        basket = new ArrayList<>();
+        this.basket = new ArrayList<>();
         if (capacity > 0) {
             this.capacity = capacity;
         } else {
@@ -16,8 +16,8 @@ public class Basket {
     }
 
     public boolean addBagel(String type){
-        if (basket.size() < this.capacity) {
-            basket.add(type);
+        if (this.basket.size() < this.capacity) {
+            this.basket.add(type);
             return true;
         }
         System.out.println("Basket is full");
@@ -25,14 +25,14 @@ public class Basket {
     }
 
     public boolean removeBagel(String type) {
-        if (basket.isEmpty()) {
+        if (this.basket.isEmpty()) {
             System.out.println("Basket is empty");
             return false;
-        } else if (basket.contains(type)) {
+        } else if (this.basket.contains(type)) {
             // Remove only one of type if multiple exists
-            for (int i = 0; i < basket.size(); i++) {
-                if (basket.get(i).equals(type)) {
-                    basket.remove(i);
+            for (int i = 0; i < this.basket.size(); i++) {
+                if (this.basket.get(i).equals(type)) {
+                    this.basket.remove(i);
                     return true;
                 }
             }
@@ -42,6 +42,7 @@ public class Basket {
     }
 
     public boolean setCapacity(int capacity) {
+        this.capacity = capacity;
         return true;
     }
 }
