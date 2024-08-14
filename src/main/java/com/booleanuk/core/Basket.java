@@ -42,6 +42,10 @@ public class Basket {
     }
 
     public boolean setCapacity(int capacity) {
+        if (capacity < 1) {
+            System.out.println("Capacity must be a positive number");
+            return false;
+        }
         this.capacity = capacity;
         return true;
     }
