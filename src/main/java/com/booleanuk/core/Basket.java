@@ -37,7 +37,8 @@ public class Basket {
                 }
             }
         }
-        return true;
+        System.out.println("No such bagel exists in your basket");
+        return false;
     }
 
     public boolean setCapacity(int capacity) {
