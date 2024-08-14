@@ -30,4 +30,14 @@ class BasketTest {
         assertTrue(b2);
         assertFalse(b3);
     }
+
+
+    @Test
+    public void testRemoveFromBasket() {
+        Basket basket = new Basket(2);
+
+        boolean b1 = basket.removeBagel("1");
+
+        assertFalse(b1);
+    }
 }
