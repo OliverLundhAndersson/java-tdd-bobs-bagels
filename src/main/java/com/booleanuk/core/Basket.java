@@ -45,6 +45,9 @@ public class Basket {
         if (capacity < 1) {
             System.out.println("Capacity must be a positive number");
             return false;
+        } else if (capacity < basket.size()) {
+            System.out.println("Basket contains to many bagels. Please empty the basket first");
+            return false;
         }
         this.capacity = capacity;
         return true;
