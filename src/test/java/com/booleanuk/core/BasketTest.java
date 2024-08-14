@@ -45,5 +45,9 @@ class BasketTest {
 
         assertTrue(b2);
         assertFalse(b3);
+
+        basket.addBagel("1");
+        boolean b4 = basket.removeBagel("2");
+        assertFalse(b4);
     }
 }
