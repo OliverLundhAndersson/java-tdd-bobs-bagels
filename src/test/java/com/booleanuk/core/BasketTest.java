@@ -56,5 +56,8 @@ class BasketTest {
         Basket basket = new Basket(2);
         basket.setCapacity(3);
         assertEquals(3, basket.capacity);
+
+        boolean b1 = basket.setCapacity(-1);
+        assertFalse(b1);
     }
 }
