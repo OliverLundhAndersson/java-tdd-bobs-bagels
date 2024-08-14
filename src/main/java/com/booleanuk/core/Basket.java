@@ -1,5 +1,29 @@
 package com.booleanuk.core;
 
-public class Basket {
+import java.util.ArrayList;
 
+public class Basket {
+    public int capacity;
+    public ArrayList<String> basket;
+
+    public Basket(int capacity) {
+        basket = new ArrayList<>();
+        if (capacity > 0) {
+            this.capacity = capacity;
+        } else {
+            this.capacity = 1;
+        }
+    }
+
+    public boolean addBagel(String type){
+        return true;
+    }
+
+    public boolean removeBagel(String type) {
+        return true;
+    }
+
+    public boolean setCapacity(int capacity) {
+        return true;
+    }
 }
