@@ -1,6 +1,5 @@
 package com.booleanuk.core;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -49,6 +48,13 @@ class BasketTest {
         basket.addBagel("1");
         boolean b4 = basket.removeBagel("2");
         assertFalse(b4);
+
+        basket.addBagel("1");
+        basket.addBagel("1");
+        boolean b5 = basket.removeBagel("1");
+        boolean b6 = basket.removeBagel("1");
+        assertTrue(b5);
+        assertTrue(b6);
     }
 
     @Test
