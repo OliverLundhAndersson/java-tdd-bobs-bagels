@@ -50,4 +50,11 @@ class BasketTest {
         boolean b4 = basket.removeBagel("2");
         assertFalse(b4);
     }
+
+    @Test
+    public void testSetCapacity() {
+        Basket basket = new Basket(2);
+        basket.setCapacity(3);
+        assertEquals(3, basket.capacity);
+    }
 }
