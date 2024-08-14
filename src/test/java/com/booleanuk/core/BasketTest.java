@@ -70,5 +70,8 @@ class BasketTest {
         basket.addBagel("2");
         boolean b2 = basket.setCapacity(1, true);
         assertFalse(b2);
+
+        boolean b3 = basket.setCapacity(5, false);
+        assertFalse(b3);
     }
 }
